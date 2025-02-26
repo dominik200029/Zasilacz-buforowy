@@ -1,0 +1,26 @@
+USB_A_OC - wykrywanie przeciążenia na UsbA(GPIO Input)
+USB_C_OC - wykrywanie przeciążenia na UsbC(GPIO Input)
+FET_CTRL_CONN_C - włącz/wyłącz scalak od kontroli prądu usb C(GPIO Output)
+FET_CTRL_CONN_A -                                           A(GPIO Output)
+    
+-USB_PD_OC - ?(przetwornik)
+
+
+-SAFE_PWR_EN - enabled when the EZ-PD BCR device fails to negotiate for higher power (GPIO Input)
+-FLIP - If a device is attached on CC2 (polarity is flipped), the EZ-PD BCR device pulls
+this line high.(GPIO Input)
+
+-VBUS_FET_EN_CTRL - if 1, VBUS_FET_EN is 0 and if =0, VBUS_FET_EN is 1; This signal is enabled when the EZ-PD BCR device successfully negotiates a power contract
+within the requested range.(GPIO Output)
+
+HPI(SDA,SCL,INT) - komunikacja po i2c z układem CYPD3177(wynegocjowane wartosci pradu i napiecia)
+
+Quick Charge na 12V
+-QC_DN - USB Data Line DN; jezeli stan wysoki to ściąga linie danych USB N do masy(GPIO Output)
+-QC_DP - USB Data Line DP; jezeli stan wysoki to ściąga linie danych USB P do masy(GPIO Output)
+
+-PD_PWR_LED - włącza led od power delivery stanem wysokim(GPIO Output)
+
+-USB_VOLTAGE_SENS - napiecie PD(przetwornik ADC)
+
+-DC_DC_OUT_SENS - napiecie na wyjsciu przetwornicy (przetwornik ADC)

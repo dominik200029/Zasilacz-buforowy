@@ -1,0 +1,12 @@
+Czekaj, aż fault == 0, czyli dopóki napięcie na wyjściu będzie conajmniej 12V
+
+Jeżeli oba porty USB A i C są dostępne, miga co sekundę
+Jeżeli dostępny jeden port - USB A(bo ma priorytet) to miga co 3 sekundy
+
+W przerwaniu od timera zmienia się okres, co jaki wykonuje sie LED_Toggle() w zależności od powyższych warunków
+
+W przypadku overcurrent na którymś z portów, dioda świeci ciągle i oba porty są OFF
+Jeżeli waga pobiera > 13W wyłącz USB C, jeżeli > 15W wyłacz też USB A.
+
+Zostało:
+-co jeżeli nie wynegocjuje i mamy 5V? TODO
